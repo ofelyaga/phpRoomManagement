@@ -9,7 +9,9 @@ class AuthController
             $username = $_POST["username"];
             $password = $_POST["password"];
             $user = User::findbyUsername($username);
-            if($user && password_verify($password, $user['password'])){
+            //var_dump($user);
+           // var_dump(password_verify($password, $user['password']));
+            if($user && $user['password'] == $password){
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
                 $_SESSION['role'] = $user['role'];

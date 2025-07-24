@@ -27,7 +27,7 @@ class RoomController
     public function checkAuth()
     {
         if(!isset($_SESSION['user_id'])) {
-            header("Location: /controllers/AuthController.php");
+            header("Location:  /controllers/AuthController.php");
             exit;
         }
     }
