@@ -18,7 +18,7 @@ class RoomController
             $type = $_POST['type'];
             $price = $_POST['price'];
             Room::createRoom($number, $type, $price);
-            header("Location: index.php");
+            header("Location: /controllers/RoomController.php");
             exit;
         }
         include $_SERVER['DOCUMENT_ROOT'] . "/views/rooms/add.php";
@@ -27,14 +27,7 @@ class RoomController
     public function checkAuth()
     {
         if(!isset($_SESSION['user_id'])) {
-            header("Location: AuthController.php");
-            exit;
-        }
-    }
-    public function checkIn()
-    {
-        if(!isset($_SESSION['user_id'])) {
-            header("Location: AuthController.php");
+            header("Location:  /controllers/AuthController.php");
             exit;
         }
     }

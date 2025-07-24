@@ -1,7 +1,7 @@
 <?php
 include 'header.php';
-include $_SERVER['DOCUMENT_ROOT'].'/controllers/Roomcontroller.php';
-$room = new Roomcontroller();
+include $_SERVER['DOCUMENT_ROOT'].'/controllers/RoomController.php';
+$room = new RoomController();
 ?>
 <h2>Добавить номер</h2>
 <form method="post" action="<?=$room->addRoom()?>">

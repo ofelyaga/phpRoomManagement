@@ -3,7 +3,7 @@ class UserController{
     public function index()
     {
         $this->checkAuth();
-        if($_SESSION['role'] !== 'admin'){
+        if(isset($_SESSION['user_id']) && $_SESSION['role'] !== 'admin'){
             http_response_code(403);
             echo '403 Forbidden';
             exit;
