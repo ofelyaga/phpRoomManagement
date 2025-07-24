@@ -31,6 +31,13 @@ class RoomController
             exit;
         }
     }
+    public function checkIn()
+    {
+        if(!isset($_SESSION['user_id'])) {
+            header("Location: AuthController.php");
+            exit;
+        }
+    }
 }
 $action= $_GET['action']??'index';
 $controller = new RoomController();
