@@ -3,7 +3,6 @@ require_once $_SERVER['DOCUMENT_ROOT']."/models/User.php";
 
 class AuthController
 {
-
     public function login ()
     {
         if($_SERVER["REQUEST_METHOD"] == "POST"){
